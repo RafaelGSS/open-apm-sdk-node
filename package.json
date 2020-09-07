@@ -1,0 +1,38 @@
+{
+  "name": "open-apm-sdk-node",
+  "version": "1.0.0",
+  "description": "Open-APM is an lightweight APM for NodeJS that **have assurance** on their users (~remove the validations~).",
+  "main": "index.js",
+  "directories": {
+    "example": "examples",
+    "lib": "lib"
+  },
+  "dependencies": {
+    "pino": "^6.6.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.8.1",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RafaelGSS/open-apm-sdk-node.git"
+  },
+  "keywords": [
+    "apm",
+    "nodejs",
+    "open-apm",
+    "apm-open"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RafaelGSS/open-apm-sdk-node/issues"
+  },
+  "homepage": "https://github.com/RafaelGSS/open-apm-sdk-node#readme"
+}
