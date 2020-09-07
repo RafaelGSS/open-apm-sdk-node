@@ -1,4 +1,4 @@
-require('../')()
+require('../')().start()
 const fastify = require('fastify')({ logger: true })
 
 fastify.get('/', function (request, reply) {
