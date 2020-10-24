@@ -8,6 +8,7 @@
     "lib": "lib"
   },
   "dependencies": {
+    "end-of-stream": "^1.4.4",
     "pino": "^6.6.0",
     "require-in-the-middle": "^5.0.3"
   },
