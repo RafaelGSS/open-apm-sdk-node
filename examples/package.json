@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/RafaelGSS/open-apm-sdk-node#readme",
   "dependencies": {
+    "express": "^4.17.1",
     "fastify": "^3.3.0"
   }
 }
