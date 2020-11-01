@@ -4,13 +4,13 @@ agent.start();
 const fastify = require('fastify')({ logger: true })
 
 fastify.get('/', function (request, reply) {
-  agent._instrumentator.wrapOnTrace(shouldTraceFunction.bind(this, 'example'));
-  agent._instrumentator.wrapOnTrace(anotherFunction);
+  agent.wrap(shouldTraceFunction.bind(this, 'example'))();
+  agent.wrap(anotherFunction)();
   reply.send('works!')
 })
 
 function shouldTraceFunction(param) {
-  agent._instrumentator.wrapOnTrace(shouldTrace2Function);
+  agent.wrap(shouldTrace2Function)();
 }
 function shouldTrace2Function() { }
 
@@ -18,21 +18,21 @@ function anotherFunction() { }
 
 fastify.get('/async', async function (request, reply) {
   await Promise.all([
-    agent._instrumentator.wrapOnTraceAsync(asyncFunc1),
-    agent._instrumentator.wrapOnTraceAsync(asyncFunc3)
+    agent.wrap(asyncFunc1, asyncFunc1.name, { asyncCb: true })(),
+    agent.wrap(asyncFunc3, asyncFunc3.name, { asyncCb: true })(),
   ]);
   reply.send('works!');
 });
 
 async function asyncFunc1() {
   await sleep(5000);
-  await agent._instrumentator.wrapOnTraceAsync(asyncFunc2);
+  await agent.wrap(asyncFunc2, asyncFunc2.name, { asyncCb: true })();
 }
 async function asyncFunc2() { }
 
 async function asyncFunc3() {
   await sleep(5000);
-  await agent._instrumentator.wrapOnTraceAsync(asyncFunc4);
+  await agent.wrap(asyncFunc4, asyncFunc4.name, { asyncCb: true })();
 }
 async function asyncFunc4() { }
 
