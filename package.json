@@ -1,7 +1,7 @@
 {
   "name": "open-apm-sdk-node",
-  "version": "1.0.0",
-  "description": "Open-APM is an lightweight APM for NodeJS that **have assurance** on their users (~remove the validations~).",
+  "version": "0.0.0",
+  "description": "Open-APM is an lightweight APM for NodeJS to use in any environment.",
   "main": "index.js",
   "directories": {
     "example": "examples",
@@ -31,7 +31,7 @@
     "open-apm",
     "apm-open"
   ],
-  "author": "",
+  "author": "RafaelGSS",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/RafaelGSS/open-apm-sdk-node/issues"
