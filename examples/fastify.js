@@ -18,21 +18,21 @@ function anotherFunction() { }
 
 fastify.get('/async', async function (request, reply) {
   await Promise.all([
-    agent.wrap(asyncFunc1, asyncFunc1.name, { asyncCb: true })(),
-    agent.wrap(asyncFunc3, asyncFunc3.name, { asyncCb: true })(),
+    agent.wrap(asyncFunc1, asyncFunc1.name, true)(),
+    agent.wrap(asyncFunc3, asyncFunc3.name, true)(),
   ]);
   reply.send('works!');
 });
 
 async function asyncFunc1() {
   await sleep(5000);
-  await agent.wrap(asyncFunc2, asyncFunc2.name, { asyncCb: true })();
+  await agent.wrap(asyncFunc2, asyncFunc2.name, true)();
 }
 async function asyncFunc2() { }
 
 async function asyncFunc3() {
   await sleep(5000);
-  await agent.wrap(asyncFunc4, asyncFunc4.name, { asyncCb: true })();
+  await agent.wrap(asyncFunc4, asyncFunc4.name, true)();
 }
 async function asyncFunc4() { }
 
