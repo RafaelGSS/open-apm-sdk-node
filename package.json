@@ -1,6 +1,6 @@
 {
   "name": "open-apm",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Open-APM is an lightweight APM for NodeJS to use in any environment.",
   "main": "index.js",
   "directories": {
