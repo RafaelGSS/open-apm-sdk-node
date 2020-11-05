@@ -16,3 +16,5 @@ export class Agent {
 
   wrap(cb: () => any, name?: string, isAsync?: boolean): () => void;
 }
+
+export const globalAgent: Agent;
