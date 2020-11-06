@@ -2,7 +2,9 @@
 
 const Agent = require('./lib/agent')
 
-export let globalAgent = null;
+let globalAgent = null;
+
+module.exports.globalAgent = globalAgent;
 
 module.exports = function (config) {
   globalAgent = new Agent(config);
