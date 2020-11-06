@@ -1,4 +1,4 @@
-const agent = require('../')();
+const agent = require('../').init();
 agent.start();
 
 const fastify = require('fastify')({ logger: true })

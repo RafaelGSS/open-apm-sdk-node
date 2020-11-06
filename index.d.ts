@@ -18,3 +18,10 @@ export class Agent {
 }
 
 export const globalAgent: Agent;
+
+interface InitializeInterface {
+  init(config?: AgentConfig): Agent;
+  globalAgent(): Agent | undefined;
+}
+
+export default InitializeInterface;
