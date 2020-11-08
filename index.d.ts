@@ -19,9 +19,10 @@ export class Agent {
 
 export const globalAgent: Agent;
 
-interface InitializeInterface {
+export declare interface Tracer {
   init(config?: AgentConfig): Agent;
-  globalAgent(): Agent | undefined;
 }
 
-export default InitializeInterface;
+export declare const tracer: Tracer;
+
+export default tracer;
