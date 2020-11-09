@@ -22,7 +22,7 @@ or Async
 import agent from '../index';
 agent.start();
 
-agent.wrap(functionExample)().then(() => console.log('done!'));
+agent.wrap(functionExample, 'functionExample', true)().then(() => console.log('done!'));
 
 async function functionExample() {
   // ...
