@@ -14,15 +14,10 @@ export class Agent {
 
   start(): void;
 
-  wrap(cb: () => any, name?: string, isAsync?: boolean): () => void;
+  wrap(cb: () => any, name?: string): () => void;
+  wrap(cb: () => any, name: string, isAsync: boolean): () => Promise<void>;
 }
 
-export const globalAgent: Agent;
-
-export declare interface Tracer {
-  init(config?: AgentConfig): Agent;
-}
-
-export declare const tracer: Tracer;
+export declare const tracer: Agent;
 
 export default tracer;

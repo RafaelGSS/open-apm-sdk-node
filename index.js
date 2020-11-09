@@ -2,14 +2,8 @@
 
 const Agent = require('./lib/agent')
 
-let globalAgent = undefined;
+const globalAgent = new Agent();
+globalAgent.start();
 
-module.exports = {
-  init(config) {
-    globalAgent = new Agent(config);
-    return globalAgent;
-  },
-  get globalAgent() {
-    return globalAgent;
-  }
-}
+module.exports = globalAgent;
+module.exports.default = module.exports
